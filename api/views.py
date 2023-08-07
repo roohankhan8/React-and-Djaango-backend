@@ -53,7 +53,6 @@ def getNotes(request):
 
     if request.method == "POST":
         return createNote(request)
-    return Response('getNotes')
 
 
 @api_view(["GET", "PUT", "DELETE"])
@@ -66,4 +65,3 @@ def getNote(request, pk):
 
     if request.method == "DELETE":
         return deleteNote(request, pk)
-    return Response('getNote')
